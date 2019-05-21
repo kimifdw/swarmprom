@@ -19,7 +19,13 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
-
+  - job_name: 'cloud-consumer'
+    static_configs:
+      - targets: ['10.88.2.23:21000']
+  - job_name: 'xiaomi-consumer'
+    metrics_path: '/manage/prometheus'
+    static_configs:
+      - targets: ['10.88.2.222:21001']
   - job_name: 'dockerd-exporter'
     dns_sd_configs:
     - names:

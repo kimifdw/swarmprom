@@ -147,12 +147,13 @@ services:
           memory: 64M
 
   prometheus:
-    image: stefanprodan/swarmprom-prometheus:v2.5.0
+    image: kimifdw/aux-prometheus:v2.9.2
     networks:
       - net
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
+      - '--web.enable-lifecycle'
       - '--storage.tsdb.retention=24h'
     volumes:
       - prometheus:/prometheus
