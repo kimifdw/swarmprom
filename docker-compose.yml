@@ -58,7 +58,7 @@ services:
           memory: 64M
 
   grafana:
-    image: registry.cn-hangzhou.aliyuncs.com/four-sugar/grafana:v6.1.6
+    image: registry.cn-hangzhou.aliyuncs.com/four-sugar/grafana:v6.2.0
     networks:
       - net
     environment:
